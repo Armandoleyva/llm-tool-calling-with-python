@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asistente de Vida Verde</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="chat-shell">
+      <header class="chat-header">
+        <div class="brand-mark">VV</div>
+        <div>
+          <h1>Asistente de Vida Verde</h1>
+          <p>Encuentra plantas, precios y disponibilidad.</p>
+        </div>
+        <span class="status-dot" title="Asistente disponible"></span>
+      </header>
+
+      <section id="messages" class="messages" aria-live="polite">
+        <article class="message assistant-message">
+          <div class="avatar">VV</div>
+          <div class="bubble">
+            ¡Hola! Soy el asistente de Vida Verde. Puedo ayudarte a encontrar
+            plantas, revisar precios y consultar disponibilidad.
+          </div>
+        </article>
+      </section>
+
+      <div id="typing" class="typing hidden">Consultando el catálogo...</div>
+
+      <form id="chat-form" class="composer">
+        <textarea
+          id="message-input"
+          rows="1"
+          maxlength="1200"
+          placeholder="Ej. ¿Qué suculentas tienen disponibles?"
+          required
+        ></textarea>
+        <button id="send-button" type="submit">Enviar</button>
+      </form>
+      <p class="privacy-note">Los precios y existencias provienen del catálogo actual.</p>
+    </main>
+    <script src="/static/app.js"></script>
+  </body>
+</html>
